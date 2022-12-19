@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website - v1.0<br/>
-  <a href="https://github.com/kareemalskafi" target="_blank">Kareem Al-Skafi</a>
+  <a href="https://kareem-portfolio.vercel.app" target="_blank">Kareem Al-Skafi</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="./Images/readme-img1.png" />
@@ -20,9 +20,9 @@
 
 <h3 align="center">
     🔹
-    <a href="https://github.com/kareemalskafi/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
+    <a href="https://github.com/kareemalskafi/Kareem-portfolio/issues">Report Bug</a> &nbsp; &nbsp;
     🔹
-    <a href="https://github.com/kareemalskafi/Portfolio/issues">Request Feature</a>
+    <a href="https://github.com/kareemalskafi/Kareem-portfolio/issues">Request Feature</a>
 </h3>
 
 ## TL;DR
