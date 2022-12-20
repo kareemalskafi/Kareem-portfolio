@@ -6,8 +6,9 @@ import {
   SiPostman,
   SiGithub,
   SiAdobecreativecloud,
-  SiVercel
+  SiVercel,
 } from "react-icons/si";
+import { MdMarkEmailRead } from "react-icons/md";
 
 function Toolstack() {
   return (
@@ -29,6 +30,9 @@ function Toolstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiVercel />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <MdMarkEmailRead />
       </Col>
     </Row>
   );
