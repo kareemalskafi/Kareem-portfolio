@@ -11,11 +11,11 @@ function ContactForm() {
       event.stopPropagation();
     }
     setValidated(true);
-    if (form.checkValidity() === true) {
-      alert(
-        "Thanks for writing to me. I have received your E-mail and i will respond to it shortly. 🌹"
-      );
-    }
+    // if (form.checkValidity() === true) {
+    //   alert(
+    //     "Thanks for writing to me. I have received your E-mail and i will respond to it shortly. 🌹"
+    //   );
+    // }
   };
 
   return (
@@ -26,7 +26,13 @@ function ContactForm() {
       </h1>
 
       <Container className="contact-form">
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form
+          noValidate
+          validated={validated}
+          onSubmit={handleSubmit}
+          action="https://formsubmit.co/kareemalskafi@gmail.com"
+          method="POST"
+        >
           <Row className="mb-3  justify-content-md-center ">
             <Form.Group as={Col} md="5" controlId="validationCustom01">
               <Form.Control
@@ -53,6 +59,7 @@ function ContactForm() {
                 {/* <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text> */}
                 <Form.Control
                   type="email"
+                  name="email"
                   placeholder="E-mail"
                   aria-describedby="inputGroupPrepend"
                   required
@@ -64,6 +71,13 @@ function ContactForm() {
                 <Form.Control.Feedback type="invalid">
                   Please enter your E-mail.
                 </Form.Control.Feedback>
+
+                <Form.Control
+                  type="hidden"
+                  name="_autoresponse"
+                  value="Thanks for writing to me. I have received your message and i will 
+                  respond as soon as possible. 🌹 Best wishes. Kareem"
+                />
               </InputGroup>
             </Form.Group>
           </Row>
@@ -76,6 +90,7 @@ function ContactForm() {
             >
               <Form.Control
                 as="textarea"
+                name="message"
                 rows={5}
                 placeholder="Enter Message"
                 componentClass="textarea"
