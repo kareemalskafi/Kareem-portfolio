@@ -29,7 +29,7 @@ function Toolstack() {
       </Col>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <vercel />
+        <SiVercel />
       </Col>
     </Row>
   );
