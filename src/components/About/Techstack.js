@@ -12,7 +12,8 @@ import {
   SiHtml5,
   SiCss3,
   SiArduino,
-  SiAdobephotoshop
+  SiAdobephotoshop,
+  SiDotnet
 } from "react-icons/si";
 
 function Techstack() {
@@ -31,7 +32,7 @@ function Techstack() {
         <DiReact />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
+        <SiDotnet />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiBootstrap />
