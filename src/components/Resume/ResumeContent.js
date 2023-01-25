@@ -124,6 +124,23 @@ export function Education() {
     </>
   );
 }
+
+export function Certificate() {
+  return (
+    <>
+      <h1 className="hyper-link">CERTIFICATE</h1>
+      <h4>ASP.NET MVC Core </h4>
+      <h5>
+        <b>Princess Sumaya University for Technology</b>
+      </h5>
+      <p style={{ display: "flex", justifyContent: "space-between" }}>
+        <span className="purple"> 2023</span>
+        <span className="purple"> Amman - Jordan</span>
+      </p>
+    </>
+  );
+}
+
 export function Skills() {
   return (
     <>
@@ -138,6 +155,7 @@ export function Skills() {
         <li>Bootstrap</li>
         <li>JavaScript</li>
         <li>React.js</li>
+        <li>ASP.NET MVC Core</li>
         <li>GitHub</li>
         <li>Adobe Photoshop</li>
         <li>Adobe Illustrator</li>

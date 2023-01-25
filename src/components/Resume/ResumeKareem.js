@@ -7,6 +7,7 @@ import {
   NameTitle,
   ContactInfo,
   Education,
+  Certificate,
   Skills,
   Graduation,
   Language,
@@ -29,6 +30,9 @@ function ResumeKareem() {
           <Col md={6} style={{ paddingRight: "25px" }}>
             <Row>
               <Education />
+            </Row>
+            <Row>
+              <Certificate />
             </Row>
             <Row>
               <Graduation />
