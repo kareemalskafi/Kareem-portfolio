@@ -7,10 +7,11 @@ export function NameTitle() {
     <>
       <h1 style={{ fontSize: "2.6em" }}>Kareem Al-Skafi</h1>
       <h2 className="purple">Computer Engineer</h2>
+      <br />
       <p>
         I fell in love with programming and I have at least learned something, I
         think… 🤷‍♂️
-        <br /><br />
+        <br />
         As an{" "}
         <i>
           <b className="purple">ASP.NET Developer</b>
@@ -18,31 +19,31 @@ export function NameTitle() {
         , I am a passionate programmer who is starting my career in web
         development. I have completed my education in{" "}
         <i>
-        <b className="purple">Computer Engineering</b>
+          <b className="purple">Computer Engineering</b>
         </i>{" "}
         and gained a solid understanding of web development concepts and
         technologies.
-        <br /><br />
+        <br />
         My focus is on building reliable and scalable web applications using
         ASP.NET I am comfortable with the .NET Framework and its various
         components. I also have experience working with{" "}
         <i>
-        <b className="purple">HTML, CSS, and JavaScript</b>
+          <b className="purple">HTML, CSS, and JavaScript</b>
         </i>
-        <br /><br />
+        <br />
         As a Developer, I am eager to learn and grow my skills by working on{" "}
         <i>
           <b className="purple">real-world projects</b>
         </i>{" "}
         I am a proactive problem-solver who is always looking for ways to
         improve my code and learn from my mistakes.
-        <br /><br />I am also a team player who enjoys collaborating with other
+        <br />I am also a team player who enjoys collaborating with other
         developers to deliver{" "}
         <i>
           <b className="purple">high-quality</b>
         </i>{" "}
         products on time.
-        <br /><br />
+        <br />
         In summary, I am a motivated and enthusiastic{" "}
         <i>
           <b className="purple">ASP.NET Developer</b>
