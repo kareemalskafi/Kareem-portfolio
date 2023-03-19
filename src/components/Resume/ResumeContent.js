@@ -24,9 +24,15 @@ export function NameTitle() {
         and gained a solid understanding of web development concepts and
         technologies.
         <br />
-        My focus is on building reliable and scalable web applications using
-        ASP.NET I am comfortable with the .NET Framework and its various
-        components. I also have experience working with{" "}
+        My focus is on building reliable and scalable web applications using{" "}
+        <i>
+          <b className="purple">ASP.NET</b>
+        </i>{" "}
+        , I am comfortable with the{" "}
+        <i>
+          <b className="purple">.NET Framework</b>
+        </i>{" "}
+        and its various components. I also have experience working with{" "}
         <i>
           <b className="purple">HTML, CSS, and JavaScript</b>
         </i>
@@ -35,8 +41,12 @@ export function NameTitle() {
         <i>
           <b className="purple">real-world projects</b>
         </i>{" "}
-        I am a proactive problem-solver who is always looking for ways to
-        improve my code and learn from my mistakes.
+        I am a proactive{" "}
+        <i>
+          <b className="purple">problem-solver</b>
+        </i>{" "}
+        who is always looking for ways to improve my code and learn from my
+        mistakes.
         <br />I am also a team player who enjoys collaborating with other
         developers to deliver{" "}
         <i>
@@ -44,7 +54,10 @@ export function NameTitle() {
         </i>{" "}
         products on time.
         <br />
-        In summary, I am a motivated and enthusiastic{" "}
+        <i>
+          <b className="purple">In summary</b>
+        </i>{" "}
+        , I am a motivated and enthusiastic{" "}
         <i>
           <b className="purple">ASP.NET Developer</b>
         </i>{" "}
@@ -165,18 +178,25 @@ export function Skills() {
       <ul className="resume-skills">
         <li>Data Structures</li>
         <li>Algorithms</li>
-        <li>logic Programming</li>
-        <li>Web Development</li>
+        <li>C#</li>
+        <li>Object-Oriented Programming (OOP)</li>
         <li>HTML</li>
         <li>CSS</li>
         <li>Bootstrap</li>
         <li>JavaScript</li>
         <li>React.js</li>
-        <li>ASP.NET MVC Core</li>
+        <li>ASP.NET</li>
         <li>GitHub</li>
-        <li>Adobe Photoshop</li>
-        <li>Adobe Illustrator</li>
+        <li>ASP.NET Web API</li>
+        <li>Microsoft SQL Server</li>
+        <li>Entity Framework (EF) Core</li>
+        <li>Model-View-Controller (MVC)</li>
+        <li>Model-view-viewmodel (MVVM)</li>
+
+        <li>Adobe Creative Cloud</li>
+        <li>Smart Systems</li>
         <li>Arduino</li>
+        <li>Raspberry Pi</li>
       </ul>
     </>
   );
