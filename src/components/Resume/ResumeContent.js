@@ -10,49 +10,44 @@ export function NameTitle() {
       <p>
         I fell in love with programming and I have at least learned something, I
         think… 🤷‍♂️
-        <br />I am fluent in classics like
+        <br /><br />
+        As an{" "}
         <i>
-          <b className="purple"> HTML, CSS & Javascript. </b>
+          <b className="purple">ASP.NET Developer</b>
         </i>
-        <br />
-        
-        As an <i><b className="purple">ASP.NET Developer</b></i>, I am a passionate programmer who is starting my career in web development. I have completed my education in
-        <i><b className="purple">Computer Engineering</b></i> and gained a solid understanding of web development concepts and technologies.
-        <br />
-My focus is on building reliable and scalable web applications using ASP.NET. I am comfortable with the .NET Framework and its various components. I also have experience working with
-<i><b className="purple">HTML, CSS, and JavaScript.</b></i>
-<br />
- 
-
-As a Developer, I am eager to learn and grow my skills by working on real-world projects. I am a proactive problem-solver who is always looking for ways to improve my code and learn from my mistakes. I am also a team player who enjoys collaborating with other developers to deliver high-quality products on time.
-
-In summary, I am a motivated and enthusiastic ASP.NET Developer who is ready to make a valuable contribution to any project.
-
-
-
-
-
-
-
-
-
-        My field of Interest's are building new &nbsp;
+        , I am a passionate programmer who is starting my career in web
+        development. I have completed my education in{" "}
         <i>
-          <b className="purple">Web Technologies and Products </b> and also in
-          areas related to{" "}
-          <b className="purple">
-            Deep Learning and Natural Launguage Processing.
-          </b>
-        </i>
-        <br />
-        Whenever possible, I also apply my passion for developing products with
+        <b className="purple">Computer Engineering</b>
+        </i>{" "}
+        and gained a solid understanding of web development concepts and
+        technologies.
+        <br /><br />
+        My focus is on building reliable and scalable web applications using
+        ASP.NET I am comfortable with the .NET Framework and its various
+        components. I also have experience working with{" "}
         <i>
-          <b className="purple"> Modern Javascript Library and Frameworks</b>
+        <b className="purple">HTML, CSS, and JavaScript</b>
         </i>
-        &nbsp; like
+        <br /><br />
+        As a Developer, I am eager to learn and grow my skills by working on{" "}
         <i>
-          <b className="purple"> React.js </b>
-        </i>
+          <b className="purple">real-world projects</b>
+        </i>{" "}
+        I am a proactive problem-solver who is always looking for ways to
+        improve my code and learn from my mistakes.
+        <br /><br />I am also a team player who enjoys collaborating with other
+        developers to deliver{" "}
+        <i>
+          <b className="purple">high-quality</b>
+        </i>{" "}
+        products on time.
+        <br /><br />
+        In summary, I am a motivated and enthusiastic{" "}
+        <i>
+          <b className="purple">ASP.NET Developer</b>
+        </i>{" "}
+        who is ready to make a valuable contribution to any project.
       </p>
     </>
   );
