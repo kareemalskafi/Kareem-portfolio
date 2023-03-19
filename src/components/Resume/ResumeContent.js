@@ -34,7 +34,7 @@ export function NameTitle() {
         </i>{" "}
         and its various components. I also have experience working with{" "}
         <i>
-          <b className="purple">HTML, CSS, and JavaScript</b>
+          <b className="purple">HTML, CSS, and JavaScript</b>.
         </i>
         <br />
         As a Developer, I am eager to learn and grow my skills by working on{" "}
@@ -178,8 +178,8 @@ export function Skills() {
       <ul className="resume-skills">
         <li>Data Structures</li>
         <li>Algorithms</li>
-        <li>C#</li>
         <li>Object-Oriented Programming (OOP)</li>
+        <li>C#</li>
         <li>HTML</li>
         <li>CSS</li>
         <li>Bootstrap</li>
@@ -187,9 +187,9 @@ export function Skills() {
         <li>React.js</li>
         <li>ASP.NET</li>
         <li>GitHub</li>
-        <li>ASP.NET Web API</li>
         <li>Microsoft SQL Server</li>
         <li>Entity Framework (EF) Core</li>
+        <li>ASP.NET Web API</li>
         <li>Model-View-Controller (MVC)</li>
         <li>Model-view-viewmodel (MVVM)</li>
 
