@@ -15,6 +15,24 @@ export function NameTitle() {
           <b className="purple"> HTML, CSS & Javascript. </b>
         </i>
         <br />
+
+
+        As an ASP.NET Developer, I am a passionate programmer who is starting my career in web development. I have completed my education in Computer Engineering and gained a solid understanding of web development concepts and technologies.
+
+My focus is on building reliable and scalable web applications using ASP.NET. I am comfortable with the .NET Framework and its various components. I also have experience working with HTML, CSS, and JavaScript.
+
+As a Developer, I am eager to learn and grow my skills by working on real-world projects. I am a proactive problem-solver who is always looking for ways to improve my code and learn from my mistakes. I am also a team player who enjoys collaborating with other developers to deliver high-quality products on time.
+
+In summary, I am a motivated and enthusiastic ASP.NET Developer who is ready to make a valuable contribution to any project.
+
+
+
+
+
+
+
+
+
         My field of Interest's are building new &nbsp;
         <i>
           <b className="purple">Web Technologies and Products </b> and also in

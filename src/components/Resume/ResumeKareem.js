@@ -46,6 +46,7 @@ function ResumeKareem() {
       </Container>
       <Container className="resume-contact">
         <Row>
+          
           <Col md={6} style={{ paddingRight: "25px" }}>
             <WorkExperience />
           </Col>
