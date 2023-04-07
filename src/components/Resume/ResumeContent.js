@@ -6,7 +6,7 @@ export function NameTitle() {
   return (
     <>
       <h1 style={{ fontSize: "2.6em" }}>Kareem Al-Skafi</h1>
-      <h2 className="purple">Web Developer</h2>
+      <h2 className="purple">Web Developer | ASP.NET Core MVC</h2>
       <br />
       <p>
         I fell in love with programming and I have at least learned something, I
