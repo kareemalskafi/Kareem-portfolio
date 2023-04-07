@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/Kareem-Al-Skafi-Computer-Engineer-Resume.pdf";
+import pdf from "../../Assets/../Assets/Abdalkareem-AlSkafi-Web-Developer-ASP_NET-MVC-and-Front-End-Technologies.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import {
   NameTitle,
