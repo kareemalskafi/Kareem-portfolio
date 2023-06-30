@@ -5,7 +5,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
-import Resume from "./components/Resume/ResumeKareem";
+import Resume from "./components/Resume/ResumeNew";
 import Contact from "./components/Contact/Contact";
 import {
   BrowserRouter as Router,
