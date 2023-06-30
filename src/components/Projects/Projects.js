@@ -19,7 +19,8 @@ function Projects() {
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
-        </p>
+       </p>
+
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
@@ -87,6 +88,9 @@ function Projects() {
             />
           </Col>
         </Row>
+
+
+
       </Container>
     </Container>
   );
