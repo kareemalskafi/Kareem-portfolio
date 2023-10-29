@@ -21,17 +21,7 @@ function Projects() {
           Here are a few projects I've worked on recently.
        </p>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={lms}
-              isBlog={false}
-              title="Learning Management System"
-              description="Catalyzing innovation, I actively contributed to the revolutionary Learning Management System (LMS) project, greatly enhancing educational content delivery for educators and learners."
-              ghLink="https://github.com/kareemalskafi/"
-              demoLink="https://alshalbiapps.com/LPMS/login"
-            />
-          </Col>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>          
 
           <Col md={4} className="project-card">
             <ProjectCard
@@ -57,39 +47,16 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={lms}
               isBlog={false}
-              title="Project #4"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-              ghLink="https://github.com/kareemalskafi"
-              demoLink="https://github.com/kareemalskafi"
+              title="Learning Management System"
+              description="Catalyzing innovation, I actively contributed to the revolutionary Learning Management System (LMS) project, greatly enhancing educational content delivery for educators and learners."
+              ghLink="https://github.com/kareemalskafi/"
+              demoLink="https://alshalbiapps.com/LPMS/login"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Project #5"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-              ghLink="https://github.com/kareemalskafi"
-              demoLink="https://github.com/kareemalskafi"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={standard}
-              isBlog={false}
-              title="Project #6"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-              ghLink="https://github.com/kareemalskafi"
-              demoLink="https://github.com/kareemalskafi"
-            />
-          </Col>
         </Row>
-
-
 
       </Container>
     </Container>
