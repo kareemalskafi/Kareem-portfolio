@@ -3,11 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
+import standard from "../../Assets/Projects/standard.png";
+import youapply from "../../Assets/Projects/youapply.png";
+import lms from "../../Assets/Projects/lms.png";
 import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import global from "../../Assets/Projects/global.png";
 
 function Projects() {
   return (
@@ -24,34 +24,34 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={lms}
               isBlog={false}
-              title="ToDo App"
-              description="Save Article. ToDo List App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom. It is helpful in planning our daily schedules."
-              ghLink="https://github.com/kareemalskafi/TodoApp"
-              demoLink="https://todo-app-kareemalskafi.vercel.app/"
+              title="Learning Management System"
+              description="Catalyzing innovation, I actively contributed to the revolutionary Learning Management System (LMS) project, greatly enhancing educational content delivery for educators and learners."
+              ghLink="https://github.com/kareemalskafi/"
+              demoLink="https://alshalbiapps.com/LPMS/login"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={global}
               isBlog={false}
-              title="Project #2"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-              ghLink="https://github.com/kareemalskafi"
-              demoLink="https://github.com/kareemalskafi"
+              title="Global - Business Development"
+              description="I contributed a dynamic company excelling in Global Business Development across diverse markets; Jordan, Emirates, Saudi Arabia, & Georgia, focusing on Marketing, Sales, & IT."
+              ghLink="https://github.com/kareemalskafi/"
+              demoLink="https://arino-git-main-kareemalskafi.vercel.app/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={youapply}
               isBlog={false}
-              title="Project #3"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              title="YOUAPPLY"
+              description="With pioneering exploration, I enthusiastically contributed to the enhancement of the YouApply study abroad search engine's database, simplifying course discovery for aspiring international students."
               ghLink="https://github.com/kareemalskafi"
-              demoLink="https://github.com/kareemalskafi"
+              demoLink="https://youapply.com/"
             />
           </Col>
 
@@ -79,7 +79,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={standard}
               isBlog={false}
               title="Project #6"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
