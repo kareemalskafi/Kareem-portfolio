@@ -10,7 +10,7 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Kareem Al_Skafi </span>
             from <span className="purple"> Amman, Jordan.</span>
-            <br />I am a junior website developer at web design, web development, and digital marketing company.
+            <br />I am a motivated and enthusiastic Software Implementer & Support Specialist, poised to make a valuable impact on every project I undertake.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!

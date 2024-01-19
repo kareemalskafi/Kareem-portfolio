@@ -24,11 +24,11 @@ function Home2() {
               <span style={{ color: "#CE916A" }}>"Kareem"</span>,
               <br />
               &emsp; &emsp;
-              <span style={{ color: "#9CDCFE" }}>secondname: </span>
+              <span style={{ color: "#9CDCFE" }}>lastname: </span>
               <span style={{ color: "#CE916A" }}>"Al-Skafi"</span>,
-              <br />
+              {/* <br />
               &emsp; &emsp;<span style={{ color: "#9CDCFE" }}>birthday: </span>
-              <span style={{ color: "#CE916A" }}>"1995"</span>,
+              <span style={{ color: "#CE916A" }}>"1995"</span>, */}
               <br />
               &emsp; &emsp;<span style={{ color: "#9CDCFE" }}>gender: </span>
               <span style={{ color: "#CE916A" }}>"male"</span>,
