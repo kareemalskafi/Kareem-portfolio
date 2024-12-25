@@ -13,6 +13,7 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
   AiOutlineMail,
+  AiOutlineFileProtect,
 } from "react-icons/ai";
 
 
@@ -81,6 +82,19 @@ function NavBar() {
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/certificate"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFileProtect
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                Certificates
               </Nav.Link>
             </Nav.Item>
 

@@ -7,6 +7,8 @@ import {
   SiGithub,
   SiAdobecreativecloud,
   SiVercel,
+  SiAdobe,
+  SiIcloud,
 } from "react-icons/si";
 import { MdMarkEmailRead } from "react-icons/md";
 
@@ -33,6 +35,12 @@ function Toolstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <MdMarkEmailRead />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAdobe />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiIcloud />
       </Col>
     </Row>
   );
