@@ -574,6 +574,7 @@ button:focus {
   transform: scale(1.05) !important;
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  box-shadow: 0 0 10px 4px rgba(148, 76, 206, 0.6) !important;
 }
 .tech-icon-images {
   padding: 20px !important;
@@ -692,6 +693,7 @@ button:focus {
 
 .like-btn {
   background-color: #934cce5e !important;
+  border-width: medium !important;
   border-color: #934cce5e !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
@@ -701,8 +703,9 @@ button:focus {
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: #944cced7 !important;
+  border-color: #934cce5e !important;
+  box-shadow: 0 0 10px 4px rgba(148, 76, 206, 0.6) !important;
 }
 
 .animate-like {
@@ -726,6 +729,7 @@ button:focus {
 
 .fork-btn-inner {
   line-height: 1.4em !important;
+  border-width: medium !important;
   background-color: #934cce5e !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
@@ -737,6 +741,7 @@ button:focus {
   background-color: #a24dd386 !important;
   border-color: #a24dd386 !important;
   transition: 0.3s ease !important;
+  box-shadow: 0 0 10px 4px rgba(148, 76, 206, 0.6) !important;
 }
 .fork-btn-inner::after {
   display: none !important;
