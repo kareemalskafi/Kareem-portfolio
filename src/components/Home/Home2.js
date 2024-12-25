@@ -34,7 +34,7 @@ function Home2() {
               <span style={{ color: "#CE916A" }}>"male"</span>,
               <br />
               &emsp; &emsp;<span style={{ color: "#9CDCFE" }}>height: </span>
-              <span style={{ color: "#CE916A" }}>"6538px"</span>,
+              <span style={{ color: "#CE916A" }}>"6539px"</span>,
               <br />
               &emsp; &emsp;<span style={{ color: "#9CDCFE" }}>color: </span>
               <span style={{ color: "#CE916A" }}>"#FFC3A0"</span>,
