@@ -36,6 +36,9 @@ function Home2() {
               &emsp; &emsp;<span style={{ color: "#9CDCFE" }}>height: </span>
               <span style={{ color: "#CE916A" }}>"6538px"</span>,
               <br />
+              &emsp; &emsp;<span style={{ color: "#9CDCFE" }}>color: </span>
+              <span style={{ color: "#CE916A" }}>"#FFC3A0"</span>,
+              <br />
               &emsp; &emsp;<span style={{ color: "#DCDC8B" }}>onBoring</span>
               <span style={{ color: "#9CDCFE" }}>: </span>
               <span style={{ color: "#179FFF" }}>function</span>
@@ -63,6 +66,9 @@ function Home2() {
               <br />
               &emsp; &emsp;&emsp; &emsp;&emsp; &emsp;{" "}
               <span style={{ color: "#CE916A" }}>"Javascript"</span>,
+              <br />
+              &emsp; &emsp;&emsp; &emsp;&emsp; &emsp;{" "}
+              <span style={{ color: "#CE916A" }}>"Dancing in the rain"</span>,
               <br />
               &emsp; &emsp;&emsp; &emsp;&emsp; &emsp;{" "}
               <span style={{ color: "#CE916A" }}>

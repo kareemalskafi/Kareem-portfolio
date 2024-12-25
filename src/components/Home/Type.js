@@ -6,9 +6,9 @@ function Type() {
     <Typewriter
       options={{
         strings: [
-          '{ "version" : "1.0",',
-          '"age" : "26.9",',
-          '"description" : "Simple and happy-go-lucky person",',
+          '{ "version" : "10.4.5.282",',
+          '"age" : "28.9",',
+          '"description" : "A fun-loving, curious & coding enthusiast 💻",',
           '"dependencies" : { "Coffee" : "Black" }',
           "console.log(me);",
           "return me;",
