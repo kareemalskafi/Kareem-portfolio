@@ -4,8 +4,13 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaLink } from "react-icons/fa";
+
+import Dropdown from "react-bootstrap/Dropdown";
+
 //import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
@@ -16,12 +21,17 @@ import {
   AiOutlineFileProtect,
 } from "react-icons/ai";
 
-
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const navigate = useNavigate();
+
+  const handleNavigateToLinks = () => {
+    updateExpanded(false);
+    navigate("/links");
+  };
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -91,9 +101,7 @@ function NavBar() {
                 to="/certificate"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFileProtect
-                  style={{ marginBottom: "2px" }}
-                />{" "}
+                <AiOutlineFileProtect style={{ marginBottom: "2px" }} />{" "}
                 Certificates
               </Nav.Link>
             </Nav.Item>
@@ -104,7 +112,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume 
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -116,14 +124,59 @@ function NavBar() {
                 <AiOutlineMail style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
+
+            {/*
+            <Nav.Item className="nav-dropdown">
+              <div className="dropdown">
+                <Nav.Link as="div" className="dropdown-toggle">
+                  <AiOutlineMail style={{ marginBottom: "2px" }} />&nbsp;Contact
+                </Nav.Link>
+                <div className="dropdown-menu">
+                  <Nav.Link
+                    as={Link}
+                    to="/contact-email"
+                    onClick={() => updateExpanded(false)}
+                    className="dropdown-item"
+                  >
+                    <AiOutlineMail style={{ marginBottom: "2px" }} /> Email
+                  </Nav.Link>
+                  <Nav.Link
+                    as={Link}
+                    to="/contact-phone"
+                    onClick={() => updateExpanded(false)}
+                    className="dropdown-item"
+                  >
+                    <AiOutlineMail style={{ marginBottom: "2px" }} /> Phone
+                  </Nav.Link>
+                  <Nav.Link
+                    as={Link}
+                    to="/contact-form"
+                    onClick={() => updateExpanded(false)}
+                    className="dropdown-item"
+                  >
+                    <AiOutlineMail style={{ marginBottom: "2px" }} /> Form
+                  </Nav.Link>
+                </div>
+              </div>
+            </Nav.Item>
+*/}
+
+            <Nav.Item className="fork-btn">
+              <Button
+                className="fork-btn-inner"
+                onClick={handleNavigateToLinks}
+              >
+                <FaLink style={{ fontSize: "1.2em" }} />
+              </Button>
+            </Nav.Item>
+
             <Nav.Item className="fork-btn">
               <Button
                 href="https://www.linkedin.com/in/abdalkareem-alskafi/"
                 target="_blank"
                 className="fork-btn-inner"
               >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
+                <FaLinkedinIn style={{ fontSize: "1.2em" }} />
               </Button>
             </Nav.Item>
           </Nav>

@@ -1,15 +1,11 @@
 html {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
-  );
+  --section-background-color: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.582),
+      rgba(12, 8, 24, 0.904));
 
-  --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
-  );
+  --image-gradient: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.678),
+      rgba(12, 10, 22, 0.863));
 
   --imp-text-color: #c770f0;
 }
@@ -145,11 +141,19 @@ button:focus {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
+
   }
+
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
+
+  #responsive-navbar-nav>div>div.nav-dropdown.nav-item>div>div.dropdown-toggle.nav-link {
+    justify-content: center !important;
+  }
+
 }
+
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
 }
@@ -209,10 +213,14 @@ button:focus {
 /* Home section */
 /* --------- */
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
@@ -220,28 +228,38 @@ button:focus {
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
+
   30% {
     transform: rotate(14deg);
   }
+
   40% {
     transform: rotate(-4deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
+
+  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
 }
+
 #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
@@ -254,7 +272,7 @@ button:focus {
   padding-top: 80px !important;
 }
 
-.home-section { 
+.home-section {
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center !important;
   background-repeat: no-repeat !important;
@@ -265,7 +283,7 @@ button:focus {
 .home-content {
   padding: 8rem 0 2rem !important;
   color: whitesmoke !important;
-  text-align: left !important; 
+  text-align: left !important;
 }
 
 .heading {
@@ -287,6 +305,7 @@ button:focus {
   color: #be6adf !important;
   font-weight: 600 !important;
 }
+
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #b562d6 !important;
@@ -298,6 +317,7 @@ button:focus {
     font-weight: 500 !important;
     position: absolute !important;
   }
+
   .Typewriter__cursor {
     display: none !important;
   }
@@ -309,6 +329,7 @@ button:focus {
 }
 
 @media (max-width: 767px) {
+
   .myAvtar,
   .myAvtar-contact {
     padding-top: 2em !important;
@@ -404,8 +425,9 @@ button:focus {
   background-color: rgb(10, 4, 22);
   bottom: 0 !important;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-bottom: 8px !important;
 }
+
 .footer-copywright {
   text-align: center !important;
 }
@@ -431,6 +453,7 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+
 .footer-icons {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
@@ -440,6 +463,7 @@ button:focus {
 .blockquote-footer {
   color: #a588c0 !important;
 }
+
 /* --------- */
 /* Projects */
 /* --------- */
@@ -466,6 +490,7 @@ button:focus {
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
+
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
@@ -526,10 +551,12 @@ button:focus {
   background-color: #6d20c5d7 !important;
   border-color: #6d20c5d7 !important;
 }
+
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 .project-heading {
   color: white !important;
   font-size: 2.3em !important;
@@ -576,6 +603,7 @@ button:focus {
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
   box-shadow: 0 0 10px 4px rgba(148, 76, 206, 0.6) !important;
 }
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
@@ -598,6 +626,7 @@ button:focus {
     padding-top: 0 !important;
   }
 }
+
 /* --------- */
 /* Resume */
 /* --------- */
@@ -635,6 +664,7 @@ button:focus {
     padding-left: 15px !important;
   }
 }
+
 .resume .resume-title {
   font-size: 2em;
   font-weight: 700;
@@ -713,10 +743,12 @@ button:focus {
   animation-fill-mode: forwards;
   animation-duration: 0.85s;
 }
+
 @keyframes likeAnimation {
   0% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
@@ -743,6 +775,7 @@ button:focus {
   transition: 0.3s ease !important;
   box-shadow: 0 0 10px 4px rgba(148, 76, 206, 0.6) !important;
 }
+
 .fork-btn-inner::after {
   display: none !important;
 }
@@ -805,6 +838,7 @@ button:focus {
   box-shadow: 0 0 8px #87209e;
   text-shadow: 0 0 5px #87209e;
 }
+
 /* --------- */
 /* Form section */
 /* --------- */
@@ -828,30 +862,34 @@ button:focus {
   background-color: transparent !important;
   border-color: #c770f0 !important;
 }
+
 .form-control:hover {
   transform: scale(1.009) !important;
   box-shadow: 0 3px 3px 4px rgba(129, 72, 144, 0.561) !important;
   border-color: #c770f0 !important;
 }
+
 .form-control:focus {
   transform: scale(1.02) !important;
   box-shadow: 0 3px 3px 4px rgba(129, 72, 144, 0.561) !important;
   border-color: #c770f0 !important;
 }
+
 /* --------- */
 /* Resume section */
 /* --------- */
 .resume-kareem {
   position: relative !important;
-  padding:180px 100px !important;
+  padding: 180px 100px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
 }
+
 .resume-name {
-  
+
   text-align: left !important;
   text-justify: inter-word !important;
-  padding: 3px  !important;
+  padding: 3px !important;
 
   /*border: 2.2px solid rgba(197, 115, 230, 0.883) !important;*/
 }
@@ -861,17 +899,19 @@ button:focus {
     padding-right: 15px !important;
     padding-left: 15px !important;
   }
+
   .resume-social-icons {
-   
-    padding: 3px  !important;
-  }}
+
+    padding: 3px !important;
+  }
+}
 
 .resume-contact {
   position: relative !important;
-  
+
   text-align: justify !important;
   align-items: left !important;
-  padding: 3px  !important;
+  padding: 3px !important;
 
   /*border: 2.2px solid rgba(197, 115, 230, 0.883) !important;*/
 }
@@ -879,10 +919,10 @@ button:focus {
 .resume-social-icons {
   position: relative !important;
   display: table !important;
-  padding: 3px  !important;
+  padding: 3px !important;
   align-items: center !important;
   text-decoration: none !important;
-  
+
 
   /*border: 2.2px solid rgba(197, 115, 230, 0.883) !important;*/
 }
@@ -904,6 +944,7 @@ ul.resume-skills {
   list-style: none !important;
   padding-left: 0px !important;
 }
+
 ul.resume-skills li {
   width: 40 px !important;
   height: auto !important;
@@ -918,7 +959,7 @@ ul.resume-skills li {
   vertical-align: middle !important;
   position: relative !important;
   padding: 4px 8px !important;
-  
+
   margin-bottom: 10px !important;
 }
 
@@ -937,15 +978,56 @@ ul.resume-skills li {
   border-radius: 10px !important;
   border: 3px solid rgba(219, 176, 236, 0.883) !important;
   background: #1c6ea4;
-  background: -moz-linear-gradient(
-    left,
-    rgba(197, 115, 230, 0.883) 86%,
-    #2d1950 100%
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(197, 115, 230, 0.883) 86%,
-    #2d1950 100%
-  );
+  background: -moz-linear-gradient(left,
+      rgba(197, 115, 230, 0.883) 86%,
+      #2d1950 100%);
+  background: -webkit-linear-gradient(left,
+      rgba(197, 115, 230, 0.883) 86%,
+      #2d1950 100%);
   opacity: 0.8;
+}
+
+
+/* --------- */
+/* Navbar - dropdown List*/
+/* --------- */
+
+.nav-dropdown .dropdown {
+  position: relative;
+}
+
+.nav-dropdown .dropdown-toggle {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1c1e21;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  min-width: 200px;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown .dropdown-item {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.nav-dropdown .dropdown-item:hover {
+  background-color: #343a40;
+  border-radius: 3px;
 }

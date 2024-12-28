@@ -1,76 +1,68 @@
 import React, { useState, useEffect } from "react";
-import {Container ,Row ,Col ,Alert } from "react-bootstrap";
+import { Container, Row, Col, Alert } from "react-bootstrap";
 import Particle from "../Particle";
 import Button from "react-bootstrap/Button";
-import { BsFillExclamationCircleFill } from "react-icons/bs"; 
-import CryptoJS from "crypto-js";  
-
-
+import { BsFillExclamationCircleFill } from "react-icons/bs";
+import CryptoJS from "crypto-js";
+import Content01 from "./Content01";
 
 function Links() {
-
   const [authState, setAuthState] = useState("");
   const [password, setPassword] = useState("");
-  const [showError, setShowError] = useState(false); 
-  const [attempts, setAttempts] = useState(0); 
-  const [timeRemaining, setTimeRemaining] = useState(0); 
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false); 
+  const [showError, setShowError] = useState(false);
+  const [attempts, setAttempts] = useState(0);
+  const [timeRemaining, setTimeRemaining] = useState(0);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
+  const hashedPassword01 = "pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=";
+  const hashedPassword02 = "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=";
 
- const hashedPassword01 = "pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM="; 
- const hashedPassword02 = "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U="; 
-
-
- const hashedInputPassword = CryptoJS.SHA256(password).toString(CryptoJS.enc.Base64);
-
+  const hashedInputPassword = CryptoJS.SHA256(password).toString(
+    CryptoJS.enc.Base64
+  );
 
   const handlePasswordSubmit = () => {
-         
-    setShowError(false); 
+    setShowError(false);
     if (isButtonDisabled) {
-      setShowError(true); 
+      setShowError(true);
       return;
     }
 
     if (hashedInputPassword === hashedPassword01) {
-      setAuthState("hashedPassword01"); 
+      setAuthState("hashedPassword01");
       setShowError(false);
     } else if (hashedInputPassword === hashedPassword02) {
-      setAuthState("hashedPassword02"); 
-      setShowError(false); 
+      setAuthState("hashedPassword02");
+      setShowError(false);
     } else {
-      setShowError(true); 
-      setAttempts(prev => prev + 1); 
+      setShowError(true);
+      setAttempts((prev) => prev + 1);
     }
 
     if (attempts >= 2) {
-   
-      setIsButtonDisabled(true); 
-      setTimeRemaining(3); 
+      setIsButtonDisabled(true);
+      setTimeRemaining(6);
     }
   };
 
+  useEffect(() => {
+    let timer;
+    if (isButtonDisabled && timeRemaining > 0) {
+      timer = setInterval(() => {
+        setTimeRemaining((prev) => prev - 1);
+      }, 1000);
+    } else if (timeRemaining === 0) {
+      setIsButtonDisabled(false);
+      setShowError(false);
+    }
 
-    useEffect(() => {
-      let timer;
-      if (isButtonDisabled && timeRemaining > 0) {
-        timer = setInterval(() => {
-          setTimeRemaining((prev) => prev - 1);
-        }, 1000);
-      } else if (timeRemaining === 0) {
-        setIsButtonDisabled(false); 
-        setShowError(false); 
+    return () => clearInterval(timer);
+  }, [isButtonDisabled, timeRemaining]);
 
-      }
-  
-      return () => clearInterval(timer); 
-    }, [isButtonDisabled, timeRemaining]);
-
-
-   const handleReset = () => {
-    setPassword(""); 
-    setAuthState(""); 
-    setShowError(false); 
+  const handleReset = () => {
+    setPassword("");
+    setAuthState("");
+    setShowError(false);
     setIsButtonDisabled(false);
     setAttempts(0);
     setTimeRemaining(0);
@@ -78,36 +70,50 @@ function Links() {
 
   return (
     <Container>
-
-      {!authState ? (        
+      {!authState ? (
         <div style={{ textAlign: "center", marginTop: "50px" }}>
-           <br /><br /><br />
-          <h1 className="project-heading">Please enter your <strong className="purple">Password</strong> to access the <strong className="purple">Content</strong></h1>
-          <br /><br />
-          <div className="contact-form" style={{ display: "flex", justifyContent: "center" }}>
-          <input
-            type="password"
-            className="form-control"
-            required
-            minLength="3"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            style={{
-              justifyContent:"center",
-              width: "50%",
-             }}
-
-          />  
-          </div>  
-          <br /><br />
-          <Button size="lg p-2.5 mt-3" className="like-btn"  style={{marginBottom:"30px" }}type="submit" onClick={handlePasswordSubmit} disabled={isButtonDisabled}>
+          <br />
+          <br />
+          <br />
+          <h1 className="project-heading">
+            Please enter your <strong className="purple">Password</strong> to
+            access the <strong className="purple">Content</strong>
+          </h1>
+          <br />
+          <br />
+          <div
+            className="contact-form"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <input
+              type="password"
+              className="form-control"
+              required
+              minLength="3"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              style={{
+                justifyContent: "center",
+                width: "50%",
+              }}
+            />
+          </div>
+          <br />
+          <br />
+          <Button
+            size="lg p-2.5 mt-3"
+            className="like-btn"
+            style={{ marginBottom: "30px" }}
+            type="submit"
+            onClick={handlePasswordSubmit}
+            disabled={isButtonDisabled}
+          >
             Submit ✉
           </Button>
 
-
-             {showError && (
-              <Alert
+          {showError && (
+            <Alert
               variant="danger"
               style={{
                 marginTop: "20px",
@@ -123,137 +129,291 @@ function Links() {
               <BsFillExclamationCircleFill
                 style={{ marginRight: "10px", fontSize: "1.5rem" }}
               />
-             <strong>Error!</strong>{" "}
-                  {attempts === 1
-                    ? "Incorrect password. Please try again."
-                    : attempts === 2
-                    ? "Incorrect password. Second attempt. If failed, you will need to wait."
-                    : attempts >= 3
-                    ? (
-                      <>
-                        You have exceeded the maximum number of attempts. Please wait{" "}
-                        <strong style={{ color: "#d9534f", fontWeight: "bold" }}>
-                          {timeRemaining} seconds
-                        </strong>{" "}
-                        before trying again.
-                      </>
-                    )
-                    : ""}
+              <strong>Error!</strong>{" "}
+              {attempts === 1 ? (
+                "Incorrect password. Please try again."
+              ) : attempts === 2 ? (
+                "Incorrect password. Second attempt. If failed, you will need to wait."
+              ) : attempts >= 3 ? (
+                <>
+                  You have exceeded the maximum number of attempts. Please wait{" "}
+                  <strong style={{ color: "#d9534f", fontWeight: "bold" }}>
+                    {timeRemaining} seconds
+                  </strong>{" "}
+                  before trying again.
+                </>
+              ) : (
+                ""
+              )}
             </Alert>
-    
-      )}
-
+          )}
         </div>
-
-        
       ) : authState === "hashedPassword01" ? (
-
         <Container className="home-content">
-          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>          
-
+          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
             <Col md={4} className="home-header">
-              <h1 className="hyper-link">Social Media</h1>
+              <h1 className="hyper-link">Content 01 First Row Ka</h1>
 
-               <Button variant="primary" className="like-btn" href="https://google.com/" target="_blank" style={{margin:"7px"}}>1. Google</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://google.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                1. Google
+              </Button>
 
-               <Button variant="primary" className="like-btn" href="https://facebook.com/" target="_blank" style={{margin:"7px"}}>2. Facebook</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://facebook.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                2. Facebook
+              </Button>
 
-               <Button variant="primary" className="like-btn" href="https://www.youtube.com/" target="_blank" style={{margin:"7px"}}>3. Youtube</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://www.youtube.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                3. Youtube
+              </Button>
 
-               <Button variant="primary" className="like-btn" href="https://linkediin.com/" target="_blank" style={{margin:"7px"}}>4. Linkedin</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://linkedin.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                4. Linkedin
+              </Button>
             </Col>
 
             <Col md={4} className="home-header">
-              <h1 className="hyper-link">Social Media </h1>
+              <h1 className="hyper-link">Content 01 Second Row Ka</h1>
 
-               <Button variant="primary" className="like-btn" href="https://google.com/" target="_blank" style={{margin:"7px"}}>1. Google</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://google.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                1. Google
+              </Button>
 
-               <Button variant="primary" className="like-btn" href="https://facebook.com/" target="_blank" style={{margin:"7px"}}>2. Facebook</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://facebook.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                2. Facebook
+              </Button>
 
-               <Button variant="primary" className="like-btn" href="https://www.youtube.com/" target="_blank" style={{margin:"7px"}}>3. Youtube</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://www.youtube.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                3. Youtube
+              </Button>
 
-               <Button variant="primary" className="like-btn" href="https://linkediin.com/" target="_blank" style={{margin:"7px"}}>4. Linkedin</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://linkedin.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                4. Linkedin
+              </Button>
             </Col>
 
             <Col md={4} className="home-header">
-              <h1 className="hyper-link">Social Media </h1>
+              <h1 className="hyper-link">Content 01 Third Row Ka</h1>
 
-               <Button variant="primary" className="like-btn" href="https://google.com/" target="_blank" style={{margin:"7px"}}>1. Google</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://google.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                1. Google
+              </Button>
 
-               <Button variant="primary" className="like-btn" href="https://facebook.com/" target="_blank" style={{margin:"7px"}}>2. Facebook</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://facebook.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                2. Facebook
+              </Button>
 
-               <Button variant="primary" className="like-btn" href="https://www.youtube.com/" target="_blank" style={{margin:"7px"}}>3. Youtube</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://www.youtube.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                3. Youtube
+              </Button>
 
-               <Button variant="primary" className="like-btn" href="https://linkediin.com/" target="_blank" style={{margin:"7px"}}>4. Linkedin</Button>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://linkedin.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                4. Linkedin
+              </Button>
             </Col>
-
-            </Row>
-
-
-            <Row style={{ justifyContent: "flex-end", paddingBottom: "10px", paddingTop: "50px" }}>          
-            <Button className="like-btn"  style={{width:"auto"}} type="submit" onClick={handleReset} >
-            Re-Submit ✉
+          </Row>
+          <Row
+            style={{
+              justifyContent: "flex-end",
+              paddingBottom: "10px",
+              paddingTop: "50px",
+            }}
+          >
+            <Button
+              className="like-btn"
+              style={{ width: "auto" }}
+              type="submit"
+              onClick={handleReset}
+            >
+              Re-Submit ✉
             </Button>
-            </Row>
-
-
+          </Row>
         </Container>
       ) : authState === "hashedPassword02" ? (
         <Container className="home-content">
+          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+            <Col md={4} className="home-header">
+              <h1 className="hyper-link">Content 02 First Row Kaa</h1>
 
-                <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>          
-                      
-                <Col md={4} className="home-header">
-                  <h1 className="hyper-link">Social Media</h1>
-                      
-                   <Button variant="primary" className="like-btn" href="https://google.com/" target="_blank" style={{margin:"7px"}}>1. Google</Button>
-                      
-                   <Button variant="primary" className="like-btn" href="https://facebook.com/" target="_blank" style={{margin:"7px"}}>2. Facebook</Button>
-                      
-                   <Button variant="primary" className="like-btn" href="https://www.youtube.com/" target="_blank" style={{margin:"7px"}}>3. Youtube</Button>
-                      
-                   <Button variant="primary" className="like-btn" href="https://linkediin.com/" target="_blank" style={{margin:"7px"}}>4. Linkedin</Button>
-                </Col>
-                      
-                <Col md={4} className="home-header">
-                  <h1 className="hyper-link">Social Media </h1>
-                      
-                   <Button variant="primary" className="like-btn" href="https://google.com/" target="_blank" style={{margin:"7px"}}>1. Google</Button>
-                      
-                   <Button variant="primary" className="like-btn" href="https://facebook.com/" target="_blank" style={{margin:"7px"}}>2. Facebook</Button>
-                      
-                   <Button variant="primary" className="like-btn" href="https://www.youtube.com/" target="_blank" style={{margin:"7px"}}>3. Youtube</Button>
-                      
-                   <Button variant="primary" className="like-btn" href="https://linkediin.com/" target="_blank" style={{margin:"7px"}}>4. Linkedin</Button>
-                </Col>
-                      
-      
-                      
-                </Row>
-                      
-                      
-                <Row style={{ justifyContent: "flex-end", paddingBottom: "10px", paddingTop: "50px" }}>          
-                <Button className="like-btn"  style={{width:"auto"}} type="submit" onClick={handleReset} >
-                Re-Submit ✉
-                </Button>
-                </Row>
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://google.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                1. Google
+              </Button>
 
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://facebook.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                2. Facebook
+              </Button>
 
-        
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://www.youtube.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                3. Youtube
+              </Button>
 
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://linkedin.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                4. Linkedin
+              </Button>
+            </Col>
+
+            <Col md={4} className="home-header">
+              <h1 className="hyper-link">Content 02 Second Row Kaa</h1>
+
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://google.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                1. Google
+              </Button>
+
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://facebook.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                2. Facebook
+              </Button>
+
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://www.youtube.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                3. Youtube
+              </Button>
+
+              <Button
+                variant="primary"
+                className="like-btn"
+                href="https://linkedin.com/"
+                target="_blank"
+                style={{ margin: "7px" }}
+              >
+                4. Linkedin
+              </Button>
+            </Col>
+          </Row>
+
+          <Row
+            style={{
+              justifyContent: "flex-end",
+              paddingBottom: "10px",
+              paddingTop: "50px",
+            }}
+          >
+            <Button
+              className="like-btn"
+              style={{ width: "auto" }}
+              type="submit"
+              onClick={handleReset}
+            >
+              Re-Submit ✉
+            </Button>
+          </Row>
         </Container>
-
       ) : null}
 
-      <Particle/>
+      <Particle />
     </Container>
-    
   );
 }
 
 export default Links;
-
-
-
-
-
