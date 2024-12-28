@@ -3,6 +3,8 @@ import {Container ,Row ,Col ,Alert } from "react-bootstrap";
 import Particle from "../Particle";
 import Button from "react-bootstrap/Button";
 import { BsFillExclamationCircleFill } from "react-icons/bs"; 
+import CryptoJS from "crypto-js";  
+
 
 
 function Links() {
@@ -15,6 +17,11 @@ function Links() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false); 
 
 
+ const hashedPassword01 = "pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM="; 
+ const hashedPassword02 = "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U="; 
+
+
+ const hashedInputPassword = CryptoJS.SHA256(password).toString(CryptoJS.enc.Base64);
 
 
   const handlePasswordSubmit = () => {
@@ -25,11 +32,11 @@ function Links() {
       return;
     }
 
-    if (password === "123") {
-      setAuthState("123"); 
+    if (hashedInputPassword === hashedPassword01) {
+      setAuthState("hashedPassword01"); 
       setShowError(false);
-    } else if (password === "1") {
-      setAuthState("1"); 
+    } else if (hashedInputPassword === hashedPassword02) {
+      setAuthState("hashedPassword02"); 
       setShowError(false); 
     } else {
       setShowError(true); 
@@ -139,7 +146,7 @@ function Links() {
         </div>
 
         
-      ) : authState === "123" ? (
+      ) : authState === "hashedPassword01" ? (
 
         <Container className="home-content">
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>          
@@ -191,8 +198,7 @@ function Links() {
 
 
         </Container>
-      ) : authState === "1" ? (
-        // المحتوى الثاني إذا كانت كلمة المرور 1
+      ) : authState === "hashedPassword02" ? (
         <Container className="home-content">
 
                 <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>          
