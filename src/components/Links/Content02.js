@@ -102,7 +102,7 @@ function Content02() {
         paddingTop: "50px",
       }}
     ></Row>
-  </Container>;
+  </Container>
 }
 
 export default Content02;
