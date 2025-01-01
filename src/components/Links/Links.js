@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 import CryptoJS from "crypto-js";
 import Content01 from "./Content01";
+import Content02 from "./Content02";
 
 function Links() {
   const [authState, setAuthState] = useState("");
